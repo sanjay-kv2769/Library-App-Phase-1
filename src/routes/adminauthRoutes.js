@@ -1,6 +1,6 @@
 const express = require('express'); //requiring express module
 const adminauthRouter = express.Router(); //creating router for adminrouter
-const Authordata = require('../model/Authordata');
+// const Authordata = require('../model/Authordata');
 
 
 
