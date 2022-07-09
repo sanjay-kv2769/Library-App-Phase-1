@@ -10,6 +10,8 @@ const nav = [
     {
         link:'/admin',name:'Add Book'},
     {
+        link:'/adminauth',name:'Add Author'},
+    {
         link:'/signup',name:'Sign Up'},
     {
         link:'/login',name:'Log In'},
@@ -18,7 +20,8 @@ const nav = [
 // seperating files
 const booksRouter = require('./src/routes/bookRoutes')(nav)  //passing nav to bookRoutes.js
 const adminRouter = require('./src/routes/adminRoutes')(nav) //passing nav to adminRoutes.js
-const authorsRouter = require('./src/routes/authorRoutes')(nav)
+const adminauthRouter = require('./src/routes/adminauthRoutes')(nav) //passing nav to adminauthRoutes.js
+const authorsRouter = require('./src/routes/adminathRoutes')(nav)
 // const authorRouter = require('./src/routes/authorRoutes')(nav)
 const signupRouter = require('./src/routes/signupRoutes')(nav)
 const loginRouter = require('./src/routes/loginRoutes')(nav)
@@ -32,6 +35,7 @@ app.set('views','./src/views');
 // 2nd router method
 app.use('/books',booksRouter);
 app.use('/admin',adminRouter);
+app.use('/adminauth',adminauthRouter);
 app.use('/authors',authorsRouter);
 // app.use('/author',authorRouter);
 app.use('/signup',signupRouter);
